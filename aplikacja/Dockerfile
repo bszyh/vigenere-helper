@@ -14,4 +14,5 @@ COPY webapp.py /webapp.py
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Setting the entry point
-CMD ["sh", "-c", "flask run --host=0.0.0.0 & nginx -g 'daemon off;'"]
+#CMD ["sh", "-c", "flask run --host=0.0.0.0 & nginx -g 'daemon off;'"]
+CMD ["flask", "run", "--host=0.0.0.0"] & nginx -g "daemon off;"
