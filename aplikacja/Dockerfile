@@ -2,7 +2,7 @@ FROM yobasystems/alpine-nginx
 
 # Installing dependencies
 RUN apk add --no-cache py3-pip
-RUN pip install Flask
+RUN apk add py3-flask
 
 # Setting env variable
 ENV FLASK_APP=webapp.py
